@@ -18,9 +18,11 @@ build:
       code: echo "Step Five"
 deploy:
   steps:
-    - script:
-      name: step one
-      code: echo "Step One"
+    - internal/docker-push:
+      username: $USERNAME
+      password: $PASSWORD
+      tag: test
+      repository: wyl730922/werckertest
     - script:
       name: step two
       code: echo "Step Two"

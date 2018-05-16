@@ -3,10 +3,10 @@ build:
   steps:
     - script:
       name: step one
-      code: echo "Step One"
+      code: echo "$WERCKER_OUTPUT_DIR"
     - script:
       name: step two
-      code: echo "Step Two"
+      code: echo "$USERNAME"
     - script:
       name: step three
       code: echo "Step Three"
